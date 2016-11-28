@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html ng-app="sorteioApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="DESCRIÇÃO AQUI">
+  <meta name="author" content="SEU NOME AQUI">
+  <title>Vamos programar, manas! &#x2764;</title>
+
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+  <script src="app.js"></script>
+
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- CSS customizados -->
+  <link href="custom.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="SorteioController">
+
+  <!-- Aqui começa o conteúdo da página -->
+  <div class="container">
+    <div class="minha-classe">
+      <h1>Sorteio App <font color="red">&#x2764;</font></h1>
+    </div>
+    <p class="lead">Para fazer um sorteio, siga as instruções.</p></br>
+
+    <div class="panel panel-default">
+      <div class="panel-heading"><div class="type-name">Vamos sortear?</div></div>
+      <div class="panel-body">
+        <strong>Instruções:</strong> Digite o nome do participante e clique em "Adicionar". Ao terminar de inserir todos os nomes, clique em "Sortear".</br></br>
+
+
+        <form class="form-inline" >
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nome do Participante" ng-model="nomeDoParticipante">
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="adicionarParticipante()">Adicionar</button>
+        </form>
+
+        <div class="names-list" ng-repeat="participante in participantes">
+          <span ng-bind="participante"></span>
+        </div>
+
+        <div class="winner">{{resultado}}</div>
+
+      </br></br>
+
+      <div align="center">
+        <button type="button" class="btn btn-success btn-lg" ng-click="sorteia()">Sortear</button>
+        <button type="button" class="btn btn-warning btn-lg" ng-click="limpa()">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+
+
+</br></br></br>
+
+
+<div align="center">
+  <a href="index.html" class="btn btn-success" role="button">Home</a>
+  <a href="sorteioapp.html" class="btn btn-primary" role="button">Vamos fazer um sorteio!</a>
+  <a href="tutorial.html" class="btn btn-warning" role="button">Tutorial & arquivos iniciais</a>
+  <a href="extras.html" class="btn btn-danger" role="button">Continue a estudar!</a>
+
+</div>
+  </br></br>
+
+</div>
+
+<!-- Aqui é o rodapé -->
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">feito pela <a href="http://about.me/erikacb">Erika Bueno</a> com <font color="orange">&#x2764;</font> + <a href="https://angularjs.org/" class="angularjs-link">AngularJS</a> + <a href="http://getbootstrap.com/" class="bootstrap-link">Bootstrap</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
