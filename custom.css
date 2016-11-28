@@ -1,0 +1,63 @@
+/* CSS Customizado da Aplicação */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* margem inferior de acordo com a altura do rodapé */
+  margin-bottom: 60px;
+}
+
+/* Você também pode criar sua própria classe! */
+.minha-classe {
+  color: #43215e; /* experimente trocar este valor por #E34A6F e veja o que acontece! */
+  text-align: center;
+}
+
+/* rodapé */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Tamanho fixo do rodapé - height */
+  height: 60px;
+  line-height: 60px; /* centraliza o texto verticalmente */
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+a.angularjs-link {
+  color: red;
+}
+
+a.bootstrap-link {
+  color: purple;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.type-name {
+  font-size: 20px;
+  color: #43215e;
+  text-align: center;
+}
+
+.names-list {
+  padding-top: 10px;
+  font-size: 16px;
+
+}
+
+.winner {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 30px;
+  
+
+}
